@@ -24,7 +24,7 @@ const David = () => {
         let model;
 
         loader.load(
-            '../../public/assets/david/scene.gltf',
+            './assets/david/scene.gltf',
             (gltf) => {
                 model = gltf.scene;
                 model.scale.set(0.01, 0.01, 0.01); // Масштабирование модели
