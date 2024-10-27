@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from 'three';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import classes from './David.module.css'
+import classes from './David.module.css';
+
 const David = () => {
     const mountRef = useRef();
 
@@ -27,7 +28,9 @@ const David = () => {
             './assets/david/scene.gltf',
             (gltf) => {
                 model = gltf.scene;
-                model.scale.set(0.01, 0.01, 0.01); // Масштабирование модели
+                model.scale.set(0.019, 0.019, 0.0175); // Масштабирование модели
+                model.position.x = -3;
+                model.position.y = -2;
                 scene.add(model);
             },
             undefined,
@@ -38,6 +41,9 @@ const David = () => {
 
         // Переменные для управления частотой обновления
         let lastRenderTime = 0;
+        let mouseX = 0;
+        let mouseY = 0;
+
         const animate = (time) => {
             requestAnimationFrame(animate);
 
@@ -46,7 +52,9 @@ const David = () => {
             lastRenderTime = time;
 
             if (model) {
-                model.rotation.y += 0.01; // Вращение модели по оси Y
+                // Обновление вращения модели на основе позиции курсора
+                model.rotation.y = mouseX * 0.5;
+                model.rotation.x = mouseY * -0.5;
             }
             renderer.render(scene, camera);
         };
@@ -62,9 +70,18 @@ const David = () => {
         };
         window.addEventListener('resize', handleResize);
 
+        // Обработчик движения мыши
+        const handleMouseMove = (event) => {
+            // Нормализация координат мыши в диапазоне [-1, 1]
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+
         // Очистка ресурсов при размонтировании компонента
         return () => {
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('mousemove', handleMouseMove);
             if (model) {
                 scene.remove(model);
                 model.traverse((child) => {

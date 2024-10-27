@@ -6,16 +6,16 @@ function App() {
   const [isHovered, setisHovered] = useState(false)
   const [isClicked, setisClicked] = useState(false)
   const [items, setItems] = useState ([
-    {index: 1, text:'University ', isHovered: false, isClicked: false},
-    {index: 1,text:'Антошка ', isHovered: false, isClicked: false},
-    {index: 1,text:'Ромашка ', isHovered: false, isClicked: false},
-    {index: 1,text:'Диморик ', isHovered: false, isClicked: false},
-    {index: 1,text:'Ромашка ', isHovered: false, isClicked: false},
-    {index: 1,text:'Ромашка ', isHovered: false, isClicked: false},
-    {index: 1,text:'Ромашка ', isHovered: false, isClicked: false},
-    {index: 1,text:'Ромашка ', isHovered: false, isClicked: false},
-    {index: 1,text:'Ромашка ', isHovered: false, isClicked: false},
-    {index: 1,text:'Ромашка ', isHovered: false, isClicked: false},
+    {index: 1, text:'University', isHovered: false, isClicked: false},
+    {index: 1,text:'Антошка', isHovered: false, isClicked: false},
+    {index: 1,text:'Ромашка', isHovered: false, isClicked: false},
+    {index: 1,text:'Диморик', isHovered: false, isClicked: false},
+    {index: 1,text:'Ромашка', isHovered: false, isClicked: false},
+    {index: 1,text:'ФЕДОРИК', isHovered: false, isClicked: false},
+    {index: 1,text:'ФЕДОРИК', isHovered: false, isClicked: false},
+    {index: 1,text:'ФЕДОРИК', isHovered: false, isClicked: false},
+    {index: 1,text:'ФЕДОРИК', isHovered: false, isClicked: false},
+    {index: 1,text:'ФЕДОРИК', isHovered: false, isClicked: false},
     {index: 1,text:'Максимка ', isHovered: false, isClicked: false},
   ]
   )
