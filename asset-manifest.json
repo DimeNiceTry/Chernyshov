@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Chernyshov/static/css/main.b659d4f1.css",
+    "main.js": "/Chernyshov/static/js/main.c933b1a6.js",
+    "static/media/druktextwidecyr-medium.svg": "/Chernyshov/static/media/druktextwidecyr-medium.f74cb704e8339ecf6e8f.svg",
+    "static/media/druktextwidecyr-medium.ttf": "/Chernyshov/static/media/druktextwidecyr-medium.d788363434567ae2509e.ttf",
+    "static/media/DrukWideBold.ttf": "/Chernyshov/static/media/DrukWideBold.9c659f356277c01eb408.ttf",
+    "static/media/SpaceGrotesk-Light.ttf": "/Chernyshov/static/media/SpaceGrotesk-Light.ba15429f9efcccc2826a.ttf",
+    "static/media/SpaceGrotesk-Medium.ttf": "/Chernyshov/static/media/SpaceGrotesk-Medium.d188dfade7a12bbb16c1.ttf",
+    "static/media/SpaceGrotesk-Regular.ttf": "/Chernyshov/static/media/SpaceGrotesk-Regular.3683ead52440efaeba4d.ttf",
+    "static/media/SpaceGrotesk-SemiBold.ttf": "/Chernyshov/static/media/SpaceGrotesk-SemiBold.0c90cf115980aae34f07.ttf",
+    "static/media/SpaceGrotesk-Bold.ttf": "/Chernyshov/static/media/SpaceGrotesk-Bold.9ee2fc15497f7869312f.ttf",
+    "static/media/druktextwidecyr-medium.woff2": "/Chernyshov/static/media/druktextwidecyr-medium.0cc3ecce9a047fdd1ac1.woff2",
+    "index.html": "/Chernyshov/index.html",
+    "static/media/druktextwidecyr-medium.eot": "/Chernyshov/static/media/druktextwidecyr-medium.31d6cfe0d16ae931b73c.eot",
+    "static/media/druktextwidecyr-medium.woff": "/Chernyshov/static/media/druktextwidecyr-medium.31d6cfe0d16ae931b73c.woff",
+    "main.b659d4f1.css.map": "/Chernyshov/static/css/main.b659d4f1.css.map",
+    "main.c933b1a6.js.map": "/Chernyshov/static/js/main.c933b1a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b659d4f1.css",
+    "static/js/main.c933b1a6.js"
+  ]
+}
