@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Chernyshov/static/css/main.b659d4f1.css",
-    "main.js": "/Chernyshov/static/js/main.c933b1a6.js",
+    "main.js": "/Chernyshov/static/js/main.3d739f65.js",
     "static/media/druktextwidecyr-medium.svg": "/Chernyshov/static/media/druktextwidecyr-medium.f74cb704e8339ecf6e8f.svg",
     "static/media/druktextwidecyr-medium.ttf": "/Chernyshov/static/media/druktextwidecyr-medium.d788363434567ae2509e.ttf",
     "static/media/DrukWideBold.ttf": "/Chernyshov/static/media/DrukWideBold.9c659f356277c01eb408.ttf",
@@ -15,10 +15,10 @@
     "static/media/druktextwidecyr-medium.eot": "/Chernyshov/static/media/druktextwidecyr-medium.31d6cfe0d16ae931b73c.eot",
     "static/media/druktextwidecyr-medium.woff": "/Chernyshov/static/media/druktextwidecyr-medium.31d6cfe0d16ae931b73c.woff",
     "main.b659d4f1.css.map": "/Chernyshov/static/css/main.b659d4f1.css.map",
-    "main.c933b1a6.js.map": "/Chernyshov/static/js/main.c933b1a6.js.map"
+    "main.3d739f65.js.map": "/Chernyshov/static/js/main.3d739f65.js.map"
   },
   "entrypoints": [
     "static/css/main.b659d4f1.css",
-    "static/js/main.c933b1a6.js"
+    "static/js/main.3d739f65.js"
   ]
 }
