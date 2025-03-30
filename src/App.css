@@ -22,95 +22,96 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  box-sizing: border-box;
+}
 
-}
 body{
-  background: #06b1e0;
+  background: #546AFF;
+  overflow-x: hidden;
+  transition: padding-bottom 0.6s ease;
 }
+
+/* Класс для спуска экрана при раскрытии меню */
+body.menu-expanded {
+  padding-bottom: 300px !important;
+}
+
 li{
   text-align: -webkit-match-parent;
-
 }
-ul{
-  -webkit-perspective: 1500;
 
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-bottom 0.6s ease;
 }
-.projectList{
-  transform-style: preserve-3d;
-  perspective: 500; /* Добавьте перспективу */
-  font-size: 12vh;
-  font-weight: bold;
-  transform: rotateX(5deg) rotateY(-40deg) translateZ(50px) scale(1); /* Увеличьте значение translateZ */
-  transform-origin: right center;
-  transform-style: preserve-3d;
-  will-change: transform;
-  color: black;
-  transition: transform 0.2s ease-in, font-size 0.1s ease-in, color 0.2s ease-in;
+
+.app-container.mobile {
+  flex-direction: column;
 }
 
 .App {
-  text-align:end;
-
-}
-
-.projectList.hovered {
-  transform: rotateX(5deg) rotateY(-35deg) translateZ(50px) scale(1.1); /* Увеличивает масштаб при наведении */
-  color: transparent; /* Делает текст прозрачным */
-  -webkit-text-stroke: 1px black; /* Устанавливает толщину и цвет обводки */
-}
-.projectList.active{
-  transform: rotateY(-0) translateZ(0) scale(0.9); /* Увеличьте значение translateZ */
-  -webkit-text-stroke: 1px black; /* Устанавливает толщину и цвет обводки */
-  color: transparent; /* Делает текст прозрачным */
-
-}
-
-header {
-  color: aliceblue;
-  position: fixed;
-  bottom: 6vh;
-  left: 5vw;
+  text-align: end;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  z-index: 1000; /* Добавьте это правило */
+  flex: 1;
+  padding-bottom: 80px; /* Чтобы был отступ от шапки на мобильных */
 }
 
-.header-info{
-  font-weight: 300;
-  font-family: "Space Grotesk";
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.projectList {
+  order: 1;
 }
-.header-info-main{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
-}
-.header-info-card{
-  display: flex;
-  flex-direction: column;
-  font-weight: 100;
 
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .App {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectList {
+    padding: 0;
+    order: 0;
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 5vw;
+    position: absolute;
+    right: 0;
+  }
 }
-.logo{
-  font-size: 7vh;
-  font-weight: 800;
-  display: block;
-  margin-bottom: 4vh;
-}
-.logo.hovered{
-  color: transparent; /* Делает текст прозрачным */
-  -webkit-text-stroke: 1px aliceblue; /* Устанавливает толщину и цвет обводки */
-}
-header p {
-  font-size: 1vh;
-  color: rgb(82, 82, 82);
-  
-}
-.logo span{
-  display: block;
+
+@media (max-width: 480px) {
+  body {
+    overflow-y: auto;
+  }
+  .app-container.mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .App {
+    margin-bottom: 0; /* Сбрасываем margin-bottom */
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectList {
+    order: 0;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 5vw;
+    position: fixed;
+    right: 0;
+    bottom: 80px; /* Располагаем сразу над header */
+    z-index: 99;
+  }
+  .projectList a {
+    font-size: 5vh;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
